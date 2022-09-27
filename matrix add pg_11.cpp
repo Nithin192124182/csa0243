@@ -1,30 +1,24 @@
-include<stdio.h>
-#include<conio.h>
-int main()
-{
-	int a[3][3],b[3][3],c[3][3],i,j,row,col;
-	
-	printf("\nEnter the row and column size");
-	scanf("%d%d",&row,&col);
-	printf("\nEnter the matrix1:");
-	for(i=0;i<row;i++)
-	for(j=0;j<col;j++)
-	scanf("%d",&a[i][j]);
-	printf("\nEnter the matrix2:");
-	for(i=0;i<row;i++)
-	for(j=0;j<col;j++)
-	scanf("%d",&b[i][j]);
-	for(i=0;i<row;i++)
-	for(j=0;j<col;j++)
-	c[i][j]=a[i][j]+b[i][j];
-	printf("\nThe sum is\n");
-	for(i=0;i<row;i++)
-	{
-	for(j=0;j<col;j++){
-	
-	printf("%d\t",c[i][j]);
-	}
-	printf("\n");
-}
-getch();
+#include < stdio.h >   
+int main()  
+{  
+    int m, n, c, d, first[10][10], second[10][10], sum[10][10];  
+    printf("Enter the number of rows and columns of matrix\n");  
+    scanf("%d%d", & m, & n);  
+    printf("Enter the elements of first matrix\n");  
+    for (c = 0; c < m; c++)  
+        for (d = 0; d < n; d++) scanf("%d", & first[c][d]);  
+    printf("Enter the elements of second matrix\n");  
+    for (c = 0; c < m; c++)  
+        for (d = 0; d < n; d++) scanf("%d", & second[c][d]);  
+    printf("Sum of entered matrices:-\n");  
+    for (c = 0; c < m; c++)  
+    {  
+        for (d = 0; d < n; d++)  
+        {  
+            sum[c][d] = first[c][d] + second[c][d];  
+            printf("%d\t", sum[c][d]);  
+        }  
+        printf("\n");  
+    }  
+    return 0;  
 }
